@@ -20,29 +20,128 @@ setup mouse scroll on encoders
 #define RAISE 2
 
 / {
+    macros {
+        // ö = Alt+0246, Ö = Alt+0214
+        uml_o: uml_o {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <10>;
+            bindings = <&kp LA(KP_N0) &kp LA(KP_N2) &kp LA(KP_N4) &kp LA(KP_N6)>;
+        };
+        uml_O: uml_O {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <10>;
+            bindings = <&kp LA(KP_N0) &kp LA(KP_N2) &kp LA(KP_N1) &kp LA(KP_N4)>;
+        };
+        // ä = Alt+0228, Ä = Alt+0196
+        uml_a: uml_a {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <10>;
+            bindings = <&kp LA(KP_N0) &kp LA(KP_N2) &kp LA(KP_N2) &kp LA(KP_N8)>;
+        };
+        uml_A: uml_A {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <10>;
+            bindings = <&kp LA(KP_N0) &kp LA(KP_N1) &kp LA(KP_N9) &kp LA(KP_N6)>;
+        };
+        // ü = Alt+0252, Ü = Alt+0220
+        uml_u: uml_u {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <10>;
+            bindings = <&kp LA(KP_N0) &kp LA(KP_N2) &kp LA(KP_N5) &kp LA(KP_N2)>;
+        };
+        uml_U: uml_U {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <10>;
+            bindings = <&kp LA(KP_N0) &kp LA(KP_N2) &kp LA(KP_N2) &kp LA(KP_N0)>;
+        };
+    };
+
+    behaviors {
+        uml_oe: umlaut_oe {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&uml_o>, <&uml_O>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        uml_ae: umlaut_ae {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&uml_a>, <&uml_A>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        uml_ue: umlaut_ue {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&uml_u>, <&uml_U>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
+        /*
+         * BASE LAYER
+         * ┌─────┬─────┬─────┬─────┬─────┬─────┐               ┌─────┬─────┬─────┬─────┬─────┬─────┐
+         * │ ESC │  Q  │  W  │  E  │  R  │  T  │               │  Z  │  U  │  I  │  O  │  P  │  ü  │
+         * ├─────┼─────┼─────┼─────┼─────┼─────┤               ├─────┼─────┼─────┼─────┼─────┼─────┤
+         * │ TAB │  A  │  S  │  D  │  F  │  G  │               │  H  │  J  │  K  │  L  │  ö  │  ä  │
+         * ├─────┼─────┼─────┼─────┼─────┼─────┤               ├─────┼─────┼─────┼─────┼─────┼─────┤
+         * │CTRL │  Y  │  X  │  C  │  V  │  B  │               │  N  │  M  │  ,  │  .  │  -  │CTRL │
+         * └─────┴─────┴─────┼─────┼─────┼─────┤               ├─────┼─────┼─────┼─────┴─────┴─────┘
+         *                   │SHFT │L/SPC│ GUI │               │ BSPC│R/RET│SHFT │
+         *                   └─────┴─────┴─────┘               └─────┴─────┴─────┘
+         */
         default_layer {
             display-name = "BAS";
             bindings = <
-&kp ESC    &kp Q  &kp W  &kp E      &kp R           &kp T                &kp Z          &kp U          &kp I      &kp O    &kp P     &kp LBKT
-&kp TAB    &kp A  &kp S  &kp D      &kp F           &kp G                &kp H          &kp J          &kp K      &kp L    &kp SQT   &kp SEMI
+&kp ESC    &kp Q  &kp W  &kp E      &kp R           &kp T                &kp Z          &kp U          &kp I      &kp O    &kp P     &uml_ue
+&kp TAB    &kp A  &kp S  &kp D      &kp F           &kp G                &kp H          &kp J          &kp K      &kp L    &uml_oe   &uml_ae
 &kp LCTRL  &kp Y  &kp X  &kp C      &kp V           &kp B                &kp N          &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp RCTRL
                          &kp LSHFT  &lt LOWER SPACE  &kp LGUI            &kp BACKSPACE  &lt RAISE RET  &kp RSHFT
             >;
         };
 
+        /*
+         * LOWER LAYER (optimized for Python/C++ frequency)
+         * ┌─────┬─────┬─────┬─────┬─────┬─────┐               ┌─────┬─────┬─────┬─────┬─────┬─────┐
+         * │  `  │  1  │  2  │  3  │  4  │  5  │               │  6  │  7  │  8  │  9  │  0  │  !  │
+         * ├─────┼─────┼─────┼─────┼─────┼─────┤               ├─────┼─────┼─────┼─────┼─────┼─────┤
+         * │  +  │  #  │  =  │  '  │  "  │  _  │               │  (  │  )  │  [  │  ]  │  {  │  }  │
+         * ├─────┼─────┼─────┼─────┼─────┼─────┤               ├─────┼─────┼─────┼─────┼─────┼─────┤
+         * │  #  │  <  │  >  │  \  │  &  │  ^  │               │  |  │  *  │  ;  │  :  │  %  │  $  │
+         * └─────┴─────┴─────┼─────┼─────┼─────┤               ├─────┼─────┼─────┼─────┴─────┴─────┘
+         *                   │     │     │     │               │     │     │     │
+         *                   └─────┴─────┴─────┘               └─────┴─────┴─────┘
+         */
         lower_layer {
             display-name = "LOW";
             bindings = <
-&kp GRAVE  &kp N1    &kp N2    &kp N3    &kp N4    &kp N5     &kp N6     &kp N7    &kp N8     &kp N9     &kp N0    &kp MINUS
-&trans     &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR   &kp RPAR  &kp PLUS
-&trans     &kp LBKT  &kp RBKT  &kp LBRC  &kp RBRC  &kp BSLH   &kp PIPE   &kp SEMI  &kp COLON  &kp COMMA  &kp DOT   &kp FSLH
-                               &trans    &trans    &trans     &trans     &trans    &trans
+&kp GRAVE  &kp N1    &kp N2     &kp N3    &kp N4    &kp N5             &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp EXCL
+&kp PLUS   &kp HASH  &kp EQUAL  &kp SQT   &kp DQT   &kp UNDER          &kp LPAR  &kp RPAR  &kp LBKT  &kp RBKT  &kp LBRC  &kp RBRC
+&kp HASH   &kp LT    &kp GT     &kp BSLH  &kp AMPS  &kp CARET          &kp PIPE  &kp ASTRK &kp SEMI  &kp COLON &kp PRCNT &kp DLLR
+                                &trans    &trans    &trans             &trans    &trans    &trans
             >;
         };
 
+        /*
+         * RAISE LAYER
+         * ┌─────┬─────┬─────┬─────┬─────┬─────┐               ┌─────┬─────┬─────┬─────┬─────┬─────┐
+         * │BTCLR│ BT0 │ BT1 │ BT2 │ BT3 │ BT4 │               │ INS │HOME │  ↑  │ END │ DEL │     │
+         * ├─────┼─────┼─────┼─────┼─────┼─────┤               ├─────┼─────┼─────┼─────┼─────┼─────┤
+         * │     │ ALT │CTRL │SHFT │     │     │               │PG_UP│  ←  │  ↓  │  →  │ BSPC│     │
+         * ├─────┼─────┼─────┼─────┼─────┼─────┤               ├─────┼─────┼─────┼─────┼─────┼─────┤
+         * │     │MUTE │VOL- │VOL+ │     │     │               │PG_DN│ APP │ ESC │ TAB │ENTER│     │
+         * └─────┴─────┴─────┼─────┼─────┼─────┤               ├─────┼─────┼─────┼─────┴─────┴─────┘
+         *                   │     │     │PLAY │               │     │     │     │
+         *                   └─────┴─────┴─────┘               └─────┴─────┴─────┘
+         */
         raise_layer {
             display-name = "RAI";
             bindings = <
