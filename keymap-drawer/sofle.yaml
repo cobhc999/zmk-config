@@ -38,8 +38,8 @@ layers:
   - /
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-shift$$
-  - {t: '$$mdi:apple-keyboard-command$$', h: LOW}
-  - ␣
+  - {t: ␣, h: LOW}
+  - $$mdi:apple-keyboard-command$$
   - BACKSPACE
   - {t: ⏎, h: RAI}
   - $$mdi:apple-keyboard-shift$$
