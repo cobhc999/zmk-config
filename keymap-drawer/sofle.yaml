@@ -12,7 +12,7 @@ layers:
   - I
   - O
   - P
-  - '['
+  - {t: '&uml_u', s: '&uml_U'}
   - ↹
   - A
   - S
@@ -23,8 +23,8 @@ layers:
   - J
   - K
   - L
-  - ''''
-  - ;
+  - {t: '&uml_o', s: '&uml_O'}
+  - {t: '&uml_a', s: '&uml_A'}
   - $$mdi:apple-keyboard-control$$
   - Y
   - X
@@ -38,8 +38,8 @@ layers:
   - /
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-shift$$
-  - {t: '$$mdi:apple-keyboard-command$$', h: LOW}
-  - ␣
+  - {t: ␣, h: LOW}
+  - $$mdi:apple-keyboard-command$$
   - BACKSPACE
   - {t: ⏎, h: RAI}
   - $$mdi:apple-keyboard-shift$$
@@ -55,31 +55,31 @@ layers:
   - '8'
   - '9'
   - '0'
-  - '-'
-  - {t: ▽, type: trans}
   - '!'
-  - '@'
+  - +
   - '#'
-  - $
-  - '%'
-  - ^
-  - AMPS
-  - '*'
+  - '='
+  - ''''
+  - '"'
+  - _
   - (
   - )
-  - +
-  - {t: ▽, type: trans}
   - '['
   - ']'
   - '{'
   - '}'
+  - '#'
+  - <
+  - '>'
   - \
+  - AMPS
+  - ^
   - '|'
+  - '*'
   - ;
   - ':'
-  - ','
-  - .
-  - /
+  - '%'
+  - $
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
