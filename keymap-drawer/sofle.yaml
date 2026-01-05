@@ -1,130 +1,131 @@
-layout: { zmk_keyboard: sofle }
+layout: {zmk_keyboard: sofle}
 layers:
   BAS:
-    - ESC
-    - Q
-    - W
-    - E
-    - R
-    - T
-    - Z
-    - U
-    - I
-    - O
-    - P
-    - "["
-    - ↹
-    - A
-    - S
-    - D
-    - F
-    - G
-    - H
-    - J
-    - K
-    - L
-    - "'"
-    - ;
-    - $$mdi:apple-keyboard-control$$
-    - Y
-    - X
-    - C
-    - V
-    - B
-    - N
-    - M
-    - ","
-    - .
-    - /
-    - $$mdi:apple-keyboard-control$$
-    - $$mdi:apple-keyboard-command$$
-    - { t: LOW, h: ␣ }
-    - { t: LOW, h: $$mdi:backspace-outline$$ }
-    - { t: RAI, h: ⏎ }
-    - { t: RAI, h: ↹ }
-    - $$mdi:backspace-outline$$
+  - Esc
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Z
+  - U
+  - I
+  - O
+  - P
+  - '['
+  - ↹
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ''''
+  - ;
+  - $$mdi:apple-keyboard-control$$
+  - Y
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-command$$
+  - {t: ␣, h: LOW}
+  - {t: '$$mdi:backspace-outline$$', h: LOW}
+  - {t: ⏎, h: RAI}
+  - {t: ↹, h: RAI}
+  - $$mdi:backspace-outline$$
   LOW:
-    - "`"
-    - "1"
-    - "2"
-    - "3"
-    - "4"
-    - "5"
-    - "6"
-    - "7"
-    - "8"
-    - "9"
-    - "0"
-    - "-"
-    - { t: ▽, type: trans }
-    - "!"
-    - "@"
-    - "#"
-    - $
-    - "%"
-    - ^
-    - AMPS
-    - "*"
-    - "("
-    - ")"
-    - +
-    - { t: ▽, type: trans }
-    - "["
-    - "]"
-    - "{"
-    - "}"
-    - \
-    - |
-    - ;
-    - :
-    - ","
-    - .
-    - /
-    - { t: ▽, type: trans }
-    - { t: ▽, type: trans }
-    - { t: ▽, type: trans }
-    - { t: ▽, type: trans }
-    - { t: ▽, type: trans }
-    - { t: ▽, type: trans }
+  - '`'
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - '-'
+  - {t: ▽, type: trans}
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - ^
+  - AMPS
+  - '*'
+  - (
+  - )
+  - +
+  - {t: ▽, type: trans}
+  - '['
+  - ']'
+  - LCBR
+  - RCBR
+  - \
+  - '|'
+  - ;
+  - ':'
+  - ','
+  - .
+  - SLSH
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   RAI:
-    - BT CLR
-    - BT 1
-    - BT 2
-    - BT 3
-    - BT 4
-    - BT 5
-    - Insert
-    - Home
-    - ↑
-    - End
-    - ⌦
-    - { t: ▽, type: trans }
-    - { t: ▽, type: trans }
-    - $$mdi:apple-keyboard-option$$
-    - $$mdi:apple-keyboard-control$$
-    - $$mdi:apple-keyboard-shift$$
-    - { t: ▽, type: trans }
-    - { t: ▽, type: trans }
-    - Page Up
-    - ←
-    - ↓
-    - →
-    - $$mdi:backspace-outline$$
-    - { t: ▽, type: trans }
-    - { t: ▽, type: trans }
-    - MUTE
-    - VOLD
-    - VOLU
-    - { t: ▽, type: trans }
-    - { t: ▽, type: trans }
-    - Page Down
-    - MENU
-    - ESC
-    - ↹
-    - ⏎
-    - { t: ▽, type: trans }
-    - { t: ▽, type: trans }
-    - C_PP
-    - { t: ▽, type: trans }
-    - { t: ▽, type: trans }
-    - { t: ▽, type: trans }
+  - BT CLR
+  - BT 1
+  - BT 2
+  - BT 3
+  - BT 4
+  - BT 5
+  - Insert
+  - Home
+  - ↑
+  - End
+  - ⌦
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - $$mdi:apple-keyboard-option$$
+  - LCTL
+  - $$mdi:apple-keyboard-shift$$
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Page Up
+  - ←
+  - ↓
+  - →
+  - $$mdi:backspace-outline$$
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - MUTE
+  - VOLD
+  - VOLU
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Page Down
+  - APP
+  - Esc
+  - ↹
+  - ENTER
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ⏯
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
