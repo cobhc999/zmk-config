@@ -37,12 +37,12 @@ layers:
   - .
   - /
   - $$mdi:apple-keyboard-control$$
-  - $$mdi:apple-keyboard-command$$
-  - {t: ␣, h: LOW}
-  - {t: '$$mdi:backspace-outline$$', h: LOW}
+  - $$mdi:apple-keyboard-shift$$
+  - {t: '$$mdi:apple-keyboard-command$$', h: LOW}
+  - ␣
+  - BACKSPACE
   - {t: ⏎, h: RAI}
-  - {t: ↹, h: RAI}
-  - $$mdi:backspace-outline$$
+  - $$mdi:apple-keyboard-shift$$
   LOW:
   - '`'
   - '1'
@@ -126,6 +126,6 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ⏯
-  - {type: held}
   - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
