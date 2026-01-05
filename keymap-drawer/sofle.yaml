@@ -71,15 +71,15 @@ layers:
   - {t: ▽, type: trans}
   - '['
   - ']'
-  - LCBR
-  - RCBR
+  - '{'
+  - '}'
   - \
   - '|'
   - ;
   - ':'
   - ','
   - .
-  - SLSH
+  - /
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
@@ -101,7 +101,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - $$mdi:apple-keyboard-option$$
-  - LCTL
+  - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-shift$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -113,8 +113,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - MUTE
-  - VOLD
-  - VOLU
+  - Vol Down
+  - Vol Up
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Page Down
