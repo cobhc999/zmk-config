@@ -12,7 +12,7 @@ layers:
   - I
   - O
   - P
-  - {t: '&uml_u', s: '&uml_U'}
+  - {t: '&uml_u_lower', s: '&uml_u_upper'}
   - ↹
   - A
   - S
@@ -23,8 +23,8 @@ layers:
   - J
   - K
   - L
-  - {t: '&uml_o', s: '&uml_O'}
-  - {t: '&uml_a', s: '&uml_A'}
+  - {t: '&uml_o_lower', s: '&uml_o_upper'}
+  - {t: '&uml_a_lower', s: '&uml_a_upper'}
   - $$mdi:apple-keyboard-control$$
   - Y
   - X
@@ -35,7 +35,7 @@ layers:
   - M
   - ','
   - .
-  - /
+  - '-'
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-shift$$
   - {t: ␣, h: LOW}
