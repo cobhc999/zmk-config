@@ -281,8 +281,8 @@ rect.held, rect.combo.held {
 </g>
 <g transform="translate(841, 62)" class="key keypos-11">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">&amp;uml_u</text>
-<text x="0" y="-24" class="key shifted">&amp;uml_U</text>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 60%">&amp;uml_u_lo…</tspan></text>
+<text x="0" y="-24" class="key shifted"><tspan style="font-size: 60%">&amp;uml_u_up…</tspan></text>
 </g>
 <g transform="translate(28, 118)" class="key keypos-12">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -326,13 +326,13 @@ rect.held, rect.combo.held {
 </g>
 <g transform="translate(785, 118)" class="key keypos-22">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">&amp;uml_o</text>
-<text x="0" y="-24" class="key shifted">&amp;uml_O</text>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 60%">&amp;uml_o_lo…</tspan></text>
+<text x="0" y="-24" class="key shifted"><tspan style="font-size: 60%">&amp;uml_o_up…</tspan></text>
 </g>
 <g transform="translate(841, 118)" class="key keypos-23">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">&amp;uml_a</text>
-<text x="0" y="-24" class="key shifted">&amp;uml_A</text>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 60%">&amp;uml_a_lo…</tspan></text>
+<text x="0" y="-24" class="key shifted"><tspan style="font-size: 60%">&amp;uml_a_up…</tspan></text>
 </g>
 <g transform="translate(28, 174)" class="key keypos-24">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -376,7 +376,7 @@ rect.held, rect.combo.held {
 </g>
 <g transform="translate(785, 174)" class="key keypos-34">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">/</text>
+<text x="0" y="0" class="key tap">-</text>
 </g>
 <g transform="translate(841, 174)" class="key keypos-35">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
