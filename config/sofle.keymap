@@ -85,19 +85,19 @@ setup mouse scroll on encoders
         uml_oe: umlaut_oe {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&uml_o_lower>, <&uml_o_upper>;
+            bindings = <&kp DE_O_UMLAUT>, <&kp DE_O_UMLAUT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         uml_ae: umlaut_ae {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&uml_a_lower>, <&uml_a_upper>;
+            bindings = <&kp DE_A_UMLAUT>, <&kp DE_A_UMLAUT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         uml_ue: umlaut_ue {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&uml_u_lower>, <&uml_u_upper>;
+            bindings = <&kp DE_U_UMLAUT>, <&kp DE_U_UMLAUT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
